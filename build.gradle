@@ -18,9 +18,39 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    // 데이터베이스 관련
+    implementation("org.springframework.boot:spring-boot-starter-jdbc")
+    implementation("org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3")
+    implementation("com.mysql:mysql-connector-j")
+
+    // 보안
+    implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation("io.jsonwebtoken:jjwt-api:0.11.5")
+    runtimeOnly("io.jsonwebtoken:jjwt-impl:0.11.5")
+    runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.11.5")
+
+    // 유효성 검사 (입력값 체크 등)
+    implementation("org.springframework.boot:spring-boot-starter-validation")
+
+    // Lombok (코드 간결화)
+    implementation("org.projectlombok:lombok")
+    annotationProcessor("org.projectlombok:lombok")
+
+    // 개발 편의성 (자동 리로딩 등)
+    developmentOnly("org.springframework.boot:spring-boot-devtools")
+
+    // API 문서화
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2")
+
+    // AOP 지원
+    implementation("org.springframework.boot:spring-boot-starter-aop")
+
+    // 모니터링 (선택사항)
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
+    // 테스트
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.springframework.security:spring-security-test")
 }
 
 tasks.named('test') {
