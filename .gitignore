@@ -1,10 +1,11 @@
+# Gradle 관련 파일 제외
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### IntelliJ IDEA ###
+# IntelliJ IDEA 설정 파일 제외
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
@@ -16,7 +17,7 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
-### Eclipse ###
+# Eclipse 설정 파일 제외
 .apt_generated
 .classpath
 .factorypath
@@ -28,15 +29,34 @@ bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
-### NetBeans ###
+# NetBeans 설정 파일 제외
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 
-### VS Code ###
+# VS Code 설정 파일 제외
 .vscode/
 
-### Mac OS ###
+# Mac OS 시스템 파일 제외
 .DS_Store
+
+# 환경 설정 파일 제외 (보안 중요!)
+# 모든 properties 파일 제외하되, 기본 애플리케이션 설정은 포함
+*.properties
+!application.properties
+!gradle.properties
+
+# 모든 yml 파일 제외하되, 기본 애플리케이션 설정은 포함
+*.yml
+!application.yml
+
+# 환경별 설정 파일 제외
+application-*.properties
+application-*.yml
+
+# 기타 민감한 설정 파일/디렉토리
+.env
+/config
+/secrets
