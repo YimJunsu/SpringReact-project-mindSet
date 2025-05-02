@@ -1,0 +1,47 @@
+/* src/pages/NotFound.css */
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+  padding: 2rem;
+  text-align: center;
+}
+
+.not-found-content {
+  max-width: 600px;
+}
+
+.not-found h1 {
+  font-size: 6rem;
+  color: #FF9F43;
+  margin: 0;
+  line-height: 1;
+}
+
+.not-found h2 {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #333;
+}
+
+.not-found p {
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+.btn-home {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #FF9F43;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn-home:hover {
+  background-color: #ff8e1c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

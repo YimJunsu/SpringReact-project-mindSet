@@ -1,0 +1,91 @@
+/* src/App.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f1f1f3; /* 전체 배경색을 연한 회색으로 변경 */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 중앙 정렬 */
+  min-height: calc(100vh - 150px); /* 헤더와 푸터 높이를 뺀 값 */
+  padding: 2rem 0; /* 상하 여백 추가 */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.content-section {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  width: 100%;
+}
+
+section {
+  width: 100%;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.section-title span {
+  color: #FF9F43;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1280px) {
+  .content-wrapper {
+    width: 95%;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}

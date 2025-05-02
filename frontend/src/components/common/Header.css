@@ -1,0 +1,167 @@
+.header {
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #333;
+  letter-spacing: -0.5px;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #FF9F43;
+  font-weight: bold;
+}
+
+.nav-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  margin: 0 1.5rem;
+  position: relative;
+}
+
+.nav-menu .dropdown button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.nav-menu .dropdown-menu {
+  position: absolute;
+  top: 2.2rem;
+  left: 0;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  min-width: 120px;
+}
+
+.nav-menu .dropdown-menu li {
+  list-style: none;
+}
+
+.nav-menu .dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.nav-menu .dropdown-menu a:hover {
+  background-color: #f1f1f3;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.btn-login {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.btn-register {
+  background-color: #FF9F43;
+  color: #fff;
+}
+
+.btn-logout {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.btn-user {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+  }
+
+  .nav-menu {
+    order: 3;
+    width: 100%;
+    margin-top: 1rem;
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .nav-menu ul {
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .nav-menu li {
+    margin: 0 1rem 0 0;
+    white-space: nowrap;
+  }
+
+  .nav-menu .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background: none;
+  }
+
+  .nav-menu .dropdown-menu a {
+    padding: 0.3rem 0;
+  }
+}

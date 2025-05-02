@@ -1,0 +1,64 @@
+/* src/components/home/QuoteDisplay.css */
+.quote-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.quote-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.quote-container::before {
+  content: '"';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  font-size: 5rem;
+  color: rgba(255, 159, 67, 0.1);
+  font-family: 'Georgia', serif;
+  line-height: 1;
+}
+
+.quote-content p {
+  font-size: 1.2rem;
+  color: #333;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.quote-author p {
+  font-size: 0.95rem;
+  color: #666;
+  text-align: right;
+  font-weight: 500;
+}
+
+.loading,
+.quote-error {
+  padding: 2rem;
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  .quote-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .quote-container {
+    padding: 1.5rem;
+  }
+
+  .quote-content p {
+    font-size: 1rem;
+  }
+}

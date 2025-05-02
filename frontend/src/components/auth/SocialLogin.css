@@ -1,0 +1,42 @@
+/* src/components/auth/SocialLogin.css */
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+}
+
+.social-btn:hover {
+  opacity: 0.9;
+}
+
+.social-btn .icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.kakao-btn {
+  background-color: #FEE500;
+  color: #000000;
+}
+
+.naver-btn {
+  background-color: #03C75A;
+  color: #FFFFFF;
+}
